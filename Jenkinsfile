@@ -17,7 +17,8 @@ pipeline {
 
     stage('Cloning The Code from GIT') {
       steps {
-        git 'https://github.com/mohammedabidali/calculator_rest_api_terraform_ansible'
+        git branch: 'main',
+        url: 'https://github.com/mohammedabidali/calculator_rest_api_terraform_ansible'
       }
     }
 
