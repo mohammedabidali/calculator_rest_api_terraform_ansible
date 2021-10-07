@@ -20,6 +20,14 @@ pipeline {
         git 'https://github.com/mohammedabidali/calculator_rest_api_terraform_ansible'
       }
     }
+
+    stage('Build-Image') {
+      steps {
+        script {
+          DOCKER_IMAGE = docker.build REGISTRY
+        }
+      }
+    }
   }
 
 }
