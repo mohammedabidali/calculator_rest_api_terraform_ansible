@@ -1,0 +1,17 @@
+<html>
+  <body>
+    Input 2 numbers to find the sum
+    <form action = '/calculator' method = "POST">
+      <input type = 'text' name = 'first_number' />
+      <input type = 'text' name = 'second_number' />
+      <input type = 'submit' value = 'Calculate' />
+    <form>
+      <!-- jinja2 template language -->
+      {% if post == True %}
+        Addition = {{addition}},
+        Subtraction = {{subtraction}},
+        Division = {{division}},
+        Multiplication = {{multiplication}}
+      {% endif %}
+  </body>
+</html>
